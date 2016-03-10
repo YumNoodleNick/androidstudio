@@ -8,9 +8,21 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import java.text.DecimalFormat;
 
 public class CurrencyConverter extends AppCompatActivity {
 
+    EditText editText;
+    Button button1;
+    Button button2;
+    TextView textView1;
+    TextView textView2;
+    Double dollar, euro;
+    DecimalFormat df;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +30,37 @@ public class CurrencyConverter extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        editText = (EditText) findViewById(R.id.editText);
+        button1 = (Button) findViewById(R.id.button);
+        button2 = (Button) findViewById(R.id.button2);
+        textView1 = (TextView) findViewById(R.id.textView);
+        textView2 = (TextView) findViewById(R.id.textView2);
+    }
 
+    public void dollar(View view){
+        df = new DecimalFormat("$ ###,###.##");
+        try {
+            String inputtext = editText.getText().toString();
+            Double input = Double.parseDouble(inputtext);
+            euro = input * 1.1058;
+            String uitkomst = df.format(euro);
+            textView2.setText(uitkomst);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void euro(View view){
+        df = new DecimalFormat("€ ###,###.##");
+        try {
+            String inputtext = editText.getText().toString();
+            Double input = Double.parseDouble(inputtext);
+            dollar = input * 0.904322662;
+            String uitkomst = df.format(dollar);
+            textView2.setText(uitkomst);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

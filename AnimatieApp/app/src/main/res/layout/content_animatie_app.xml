@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.laptop.animatieapp.AnimatieApp"
+    tools:showIn="@layout/activity_animatie_app">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/haunter"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/haunter"
+        android:onClick="animate"
+        android:adjustViewBounds="false"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gengar"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/haunter"
+        android:layout_alignEnd="@+id/haunter"
+        android:src="@drawable/gengar"
+        android:onClick="animate"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp" />
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:max="4000"
+        android:indeterminate="false" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:id="@+id/radioGroup"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fade"
+            android:id="@+id/fadeRadioButton"
+            android:layout_alignLeft="@id/radioGroup"
+            android:layout_alignStart="@id/radioGroup"
+            android:layout_marginRight="10dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="translate"
+            android:id="@+id/translateRadioButton"
+            android:layout_alignLeft="@id/radioGroup"
+            android:layout_alignStart="@id/radioGroup"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="rotate"
+            android:id="@+id/rotateRadioButton"
+            android:layout_alignLeft="@id/radioGroup"
+            android:layout_alignStart="@id/radioGroup"
+            android:layout_marginLeft="10dp"
+            android:checked="false" />
+
+
+    </RadioGroup>
+
+</RelativeLayout>
