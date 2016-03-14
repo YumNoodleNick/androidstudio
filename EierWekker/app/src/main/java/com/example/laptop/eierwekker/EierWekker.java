@@ -78,7 +78,7 @@ public class EierWekker extends AppCompatActivity {
 
     public void startStopTimer(View view) {
 
-        
+
 
         if (timer != null) {
             timer.cancel();
@@ -114,6 +114,7 @@ public class EierWekker extends AppCompatActivity {
                     yoshiegg.setAlpha(0f);
                     startButton.setAlpha(0f);
                     resetButton.setAlpha(1f);
+                    seekBar.setAlpha(0f);
 
 
             }

@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.laptop.braintrainerapp.BrainTrainerApp">
+    <item
+        android:id="@+id/reset_highscore"
+        android:orderInCategory="100"
+        android:title="Reset highscore"
+        app:showAsAction="never" />
+</menu>
