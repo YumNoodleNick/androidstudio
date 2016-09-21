@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">환율 계산기 V2</string>
+    <string name="action_settings">설정</string>
+
+    <string name="USD">미국 달러</string>
+    <string name="EUR">유로</string>
+    <string name="GBP">영국 파운드</string>
+    <string name="JPY">엔</string>
+    <string name="KRW">한국 원화</string>
+
+    <string name="msg">downloading data..</string>
+
+</resources>

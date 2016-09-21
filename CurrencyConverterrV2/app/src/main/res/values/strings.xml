@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Currency Converter V2</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="USD">US Dollar</string>
+    <string name="EUR">Euro</string>
+    <string name="GBP">British Pound</string>
+    <string name="JPY">Japanese Yen</string>
+    <string name="KRW">Korean Won</string>
+
+    <string name="msg">downloading data..</string>
+</resources>
